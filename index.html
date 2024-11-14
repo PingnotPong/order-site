@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,11 @@
     <link rel="stylesheet" href="styles/standart.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/styles/burger-menu-button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/scripts/standart.js"></script>
     <script src="/scripts/restaurants.js"></script>
 </head>
+
 <body>
     <header>
         <img src="/img/Logo.png" alt="">
@@ -22,10 +25,47 @@
         </div>
     </header>
     <main>
-        <nav></nav>
+        <div class="restaurant-menu"></div>
+        <div class="basket">
+            <div class="basket-header">
+                <h2>Warenkorb</h2>
+            </div>
+            <div id="basket">
+                <div class="basket-item">
+                    <h3>Ein Gericht</h3>
+                    <div><button class="fa fa-minus"></button><span class="basket-count">1</span><button
+                            class="fa fa-plus"></button><span class="basket-price">13,50€</span><button
+                            class="fa fa-trash-o"></button></div>
+                </div>
+                <div class="basket-item">
+                    <h3>und ein weiteres</h3>
+                    <div><button class="fa fa-minus"></button><span class="basket-count">1</span><button
+                            class="fa fa-plus"></button><span class="basket-price">13,50€</span><button
+                            class="fa fa-trash-o"></button></div>
+                </div>
+                <div class="basket-item">
+                    <h3>und noch eins</h3>
+                    <div><button class="fa fa-minus"></button><span class="basket-count">1</span><button
+                            class="fa fa-plus"></button><span class="basket-price">13,50€</span><button
+                            class="fa fa-trash-o"></button></div>
+                </div>
+                <div class="basket-item">
+                    <h3>dessert :D</h3>
+                    <div><button class="fa fa-minus"></button><span class="basket-count">1</span><button
+                            class="fa fa-plus"></button><span class="basket-price">13,50€</span><button
+                            class="fa fa-trash-o"></button></div>
+                </div>
+            </div>
+            <div class="basket-sum">
+                <div><span>zwischensumme</span><span>1986</span></div>
+                <div><span>lieferkosten</span><span>27</span></div>
+                <div><span>gesamt</span><span>832ß139</span></div>
+            </div>
+        </div>
     </main>
     <footer></footer>
     <button class="open-basket" style="display: none;"></button>
 
 </body>
+
 </html>

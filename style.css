@@ -7,7 +7,9 @@
 body {
     background-color: var(--main-color);
     padding-right: 8px;
-    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -22,4 +24,100 @@ header {
 
 header img {
     height: 48px;
+}
+
+main {
+    background-color: var(--background);
+    display: flex;
+    flex: 1;
+}
+
+.restaurant-menu {
+    background-color: red;
+    flex: 1;
+}
+
+.basket {
+    background-color: var(--no-color);
+    width: 280px;
+}
+
+.basket-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.199);
+    width: 100%;
+}
+
+.basket-header h2 {
+    margin: 12px;
+}
+
+.basket-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+.basket-item h3 {
+    margin: 0;
+}
+
+.basket-item div {
+    display: flex;
+    gap: 8px;
+}
+
+.basket-item button {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--no-color);
+    border: none;
+    cursor: pointer;
+    color: var(--main-color);
+    font-size: 24px;
+    border: solid 2px;
+    border-color: var(--no-color);
+    border-radius: 50%;
+}
+
+.basket-item button:hover {
+    border-color: var(--main-color);
+}
+
+.basket-price {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-count {
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-sum {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px;
+    border-top: solid 2px rgba(0, 0, 0, 0.199);
+}
+
+.basket-sum div {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    height: 64px;
+    background-color: var(--no-color);
+    display: flex;
 }
