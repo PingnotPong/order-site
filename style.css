@@ -33,13 +33,28 @@ main {
 }
 
 .restaurant-menu {
-    background-color: red;
+    background-color: var(--background);
     flex: 1;
+}
+
+.restaurant-head {
+    background-image: url(/img/restaurants/asia-gourmet-pavillon/header.avif);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.restaurant-head img {
+    background-color: white;
+    border-radius: 50%;
 }
 
 .basket {
     background-color: var(--no-color);
     width: 280px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    clip-path: inset(0 0 0 -15px);
 }
 
 .basket-header {
