@@ -2,6 +2,13 @@
     --main-color: #FF8008;
     --no-color: rgba(255, 255, 255, 0);
     --background: rgb(233, 233, 233);
+    --standart-text: black;
+    font-family: "Economica", sans-serif;
+}
+
+@font-face {
+    font-family: "Economica", sans-serif;
+    src: url(/assets/fonts/Economica-Regular.ttf);
 }
 
 body {
@@ -50,11 +57,69 @@ main {
     border-radius: 50%;
 }
 
+.restaurant-menu nav {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.116);
+    overflow-x: auto;
+}
+
+.restaurant-menu a {
+    display: block;
+    color: var(--standart-text);
+    padding: 8px;
+}
+
+.restaurant-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+.menucard {
+    border: solid 1px black;
+    margin: 8px;
+    display: flex;
+}
+
+.menucard div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+}
+
+.menucard h3 {
+    margin: 0;
+}
+
+.menu-card-price {
+    color: var(--main-color);
+}
+
+.menucard button {
+    height: 32px;
+    width: 32px;
+    border: none;
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
+    color: var(--main-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menucard button:hover {
+    color: #bb5d05;
+}
+
 .basket {
     background-color: var(--no-color);
     width: 280px;
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
     clip-path: inset(0 0 0 -15px);
+}
+
+.basket section {
+    position: sticky;
+    top: 8px;
 }
 
 .basket-header {
