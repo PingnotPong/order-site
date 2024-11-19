@@ -61,12 +61,14 @@ main {
     display: flex;
     background-color: rgba(0, 0, 0, 0.116);
     overflow-x: auto;
+    width:  calc(100vw - 280px - 8px);
 }
 
 .restaurant-menu a {
     display: block;
     color: var(--standart-text);
     padding: 8px;
+    text-wrap: nowrap;
 }
 
 .restaurant-menu a:hover {

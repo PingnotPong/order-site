@@ -10,7 +10,7 @@ function getKategorieTemplate(categoryID, categoryName) {
     `
 }
 
-function getMenuCardTemplate() {
+function getMenuCardTemplate(dishName, dishContents, dishPrice) {
     return `
     <div class="menucard">
                     <div>
