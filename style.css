@@ -196,6 +196,21 @@ main {
     justify-content: space-between;
 }
 
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.placeholder h3 {
+    color: rgba(138, 138, 138, 0.548);
+}
+
+.placeholder>.fa-shopping-cart {
+    font-size: 104px;
+    color: rgba(138, 138, 138, 0.548);
+}
+
 footer {
     height: 64px;
     background-color: var(--no-color);
