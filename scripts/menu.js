@@ -35,18 +35,19 @@ function renderBasket() {
             dI = basket[i]["index"]
             dCat = basket[i]["category"]
             basketRef.innerHTML += getBasketItemTemplate(dName, dPrice.toFixed(2) + "€", dCount, dCat, dI);
+        } 
+        sum = 0;
+        delcost = restaurants["bombay-mirchi"]["liefergebühr"];
+        for (let y = 0; y < basket.length; y++) {
+            sum = sum + (basket[y]["count"] * basket[y]["price"]);
         }
+        subtotalRef.innerHTML = sum.toFixed(2) + "€";
+        deliveryCostsRef.innerHTML = delcost.toFixed(2) + "€";
+        totalSumRef.innerHTML = (sum + delcost).toFixed(2) + "€";
+    
     } else {
         basketRef.innerHTML = getBasketPlaceholderTemplate()
     }
-    sum = 0;
-    delcost = restaurants["bombay-mirchi"]["liefergebühr"];
-    for (let y = 0; y < basket.length; y++) {
-        sum = sum + (basket[y]["count"] * basket[y]["price"]);
-    }
-    subtotalRef.innerHTML = sum.toFixed(2) + "€";
-    deliveryCostsRef.innerHTML = delcost.toFixed(2) + "€";
-    totalSumRef.innerHTML = (sum + delcost).toFixed(2) + "€";
 }
 
 function editBasket(action, cat, i) {

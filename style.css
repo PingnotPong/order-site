@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 header {
@@ -42,7 +43,6 @@ main {
 .restaurant-menu {
     background-color: var(--background);
     flex: 1;
-    max-width:  calc(100vw - 303px);
 }
 
 .restaurant-head {
@@ -62,6 +62,7 @@ main {
     display: flex;
     background-color: rgba(0, 0, 0, 0.116);
     overflow-x: auto;
+    width: calc(100vw - 23px);
 }
 
 .restaurant-menu a {
@@ -114,14 +115,24 @@ main {
 
 .basket {
     background-color: var(--no-color);
+    min-width: 280px;
     width: 280px;
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
     clip-path: inset(0 0 0 -15px);
+    display: none;
+}
+
+.basket-opened {
+    display: block;
+}
+
+.basket-opened nav {
+    width: calc(100vw - 303px);
 }
 
 .basket section {
     position: sticky;
-    top: 8px;
+    top: 8px;  
 }
 
 .basket-header {

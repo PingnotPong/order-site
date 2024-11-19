@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="shortcut icon" href="/img/favicon-32x32.png" type="image/x-icon">
     <title>Bombay Mirchi</title>
 
@@ -20,14 +20,14 @@
 <body onload="renderMenu()">
     <header>
         <img src="/img/Logo.png" alt="">
-        <div class="burger-menu-container" onclick="changeClass(this, 'burger-open')">
+        <div class="burger-menu-container" onclick="changeClass(this, 'burger-open'); changeClassById('basketSection', 'basket-opened'); changeClassById('menusection', 'basket-opened')">
             <div class="burger-one"></div>
             <div class="burger-two"></div>
             <div class="burger-three"></div>
         </div>
     </header>
     <main>
-        <div class="restaurant-menu">
+        <div class="restaurant-menu" id="menusection">
             <div class="restaurant-head">
                 <img src="/img/restaurants/asia-gourmet-pavillon/icon.png" alt="">
             </div>
@@ -40,31 +40,15 @@
                 <a href="kategorie4">kategorie4</a>
                 <a href="kategorie5">kategorie5</a>
             </nav>
-            <div class="menu" id="menu">
-                <h3>Hauptgerichte</h3>
-                <div class="menucard">
-                    <div>
-                        <h3>Gericht</h3>
-                        <span>inhalt</span>
-                        <span class="menu-card-price">preis</span>
-                    </div>
-                    <button class="fa fa-plus"></button>
-                </div>
-                
-            </div>
+            <div class="menu" id="menu"></div>
         </div>
-        <div class="basket">
-            <section id="basketContainer">
-                <div class="placeholder">
-                <h3>Ich rieche deinen Hunger</h3>
-                <i class="fa fa-shopping-cart"></i> 
-                </div>
-            </section>
+        <div class="basket" id="basketSection">
+            <section id="basketContainer"></section>
         </div>
     </main>
     <footer></footer>
     <button class="open-basket" style="display: none;"></button>
-
+    
 </body>
 
 </html>
