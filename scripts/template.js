@@ -10,7 +10,7 @@ function getKategorieTemplate(categoryID, categoryName) {
     `
 }
 
-function getMenuCardTemplate(dishName, dishContents, dishPrice) {
+function getMenuCardTemplate(dishName, dishContents, dishPrice, cat, i) {
     return `
     <div class="menucard">
                     <div>
@@ -18,7 +18,7 @@ function getMenuCardTemplate(dishName, dishContents, dishPrice) {
                         <span>${dishContents}</span>
                         <span class="menu-card-price">${dishPrice}</span>
                     </div>
-                    <button class="fa fa-plus"></button>
+                    <button class="fa fa-plus" onclick="editBasket('plus', '${cat}', '${i}')"></button>
                 </div>
                 `
 }
@@ -31,19 +31,19 @@ function getBasketBaseTemplate() {
                 <div id="basket">
                 </div>
                 <div class="basket-sum">
-                    <div><span>zwischensumme</span><span>1986</span></div>
-                    <div><span>lieferkosten</span><span>27</span></div>
-                    <div><span>gesamt</span><span>832ß139</span></div>
+                    <div><span>Zwischensumme</span><span id="subtotal"></span></div>
+                    <div><span>Lieferkosten</span><span id="deliveryCosts"></span></div>
+                    <div><span>Gesamt Summe</span><span id="totalSum"></span></div>
                 </div>`
 }
 
-function getBasketItemTemplate() {
+function getBasketItemTemplate(dName, dPrice, dCount, cat, i) {
     return `
-                        <div class="basket-item">
-                        <h3>Ein Gericht</h3>
-                        <div><button class="fa fa-minus"></button><span class="basket-count">1</span><button
-                                class="fa fa-plus"></button><span class="basket-price">13,50€</span><button
-                                class="fa fa-trash-o"></button></div>
+                    <div class="basket-item">
+                        <h3>${dName}</h3>
+                        <div><button class="fa fa-minus" onclick="editBasket('minus', '${cat}', '${i}')"></button><span class="basket-count">${dCount}</span><button
+                                class="fa fa-plus" onclick="editBasket('plus', '${cat}', '${i}')"></button><span class="basket-price">${dPrice}</span><button
+                                class="fa fa-trash-o" onclick="editBasket('delete', '${cat}', '${i}')"></button></div>
                     </div>
                     `
 }

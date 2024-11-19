@@ -42,6 +42,7 @@ main {
 .restaurant-menu {
     background-color: var(--background);
     flex: 1;
+    max-width:  calc(100vw - 303px);
 }
 
 .restaurant-head {
@@ -61,7 +62,6 @@ main {
     display: flex;
     background-color: rgba(0, 0, 0, 0.116);
     overflow-x: auto;
-    width:  calc(100vw - 280px - 8px);
 }
 
 .restaurant-menu a {
@@ -129,7 +129,6 @@ main {
     justify-content: center;
     align-items: center;
     border-bottom: solid 2px rgba(0, 0, 0, 0.199);
-    width: 100%;
 }
 
 .basket-header h2 {

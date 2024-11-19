@@ -1,7 +1,7 @@
 restaurants = {
     "bombay-mirchi": {
         "name": "Asia Gourmet Pavillon & Hallo Sushi",
-        "liefergebühr": 0,
+        "liefergebühr": 5,
         "mindestbestellwert": 10.00,
         "essensart": ["Sushi", "Chinesisch"],
         "kategorien": {
