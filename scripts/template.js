@@ -34,7 +34,11 @@ function getBasketBaseTemplate() {
                     <div><span>Zwischensumme</span><span id="subtotal"></span></div>
                     <div><span>Lieferkosten</span><span id="deliveryCosts"></span></div>
                     <div><span>Gesamt Summe</span><span id="totalSum"></span></div>
-                </div>`
+                </div>
+                <div class="submit-order-button">
+                <button onclick="editBasket('buy')">Jetzt Bestellen</button>
+                </div
+                `
 }
 
 function getBasketItemTemplate(dName, dPrice, dCount, cat, i) {

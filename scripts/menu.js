@@ -21,6 +21,7 @@ function renderMenu() {
 
 function renderBasket() {
     basketRef = document.getElementById("basketContainer")
+    buttonSumRef = document.getElementById("displaySum")
     basketRef.innerHTML = "";
     if(basket.length > 0) {
         basketRef.innerHTML += getBasketBaseTemplate();
@@ -44,15 +45,18 @@ function renderBasket() {
         subtotalRef.innerHTML = sum.toFixed(2) + "€";
         deliveryCostsRef.innerHTML = delcost.toFixed(2) + "€";
         totalSumRef.innerHTML = (sum + delcost).toFixed(2) + "€";
-    
+        buttonSumRef.innerHTML = "(" + (sum + delcost).toFixed(2) + "€" + ")";
     } else {
         basketRef.innerHTML = getBasketPlaceholderTemplate()
+        buttonSumRef.innerHTML = "(0.00€)";
     }
 }
 
 function editBasket(action, cat, i) {
-    nameTest = restaurants["bombay-mirchi"]["kategorien"][cat];
-    nameTest = nameTest[i]["name"];
+    if (cat == undefined) {} else {
+        nameTest = restaurants["bombay-mirchi"]["kategorien"][cat];
+        nameTest = nameTest[i]["name"];        
+    }
     switch (action) {
         case "plus":
             result = false;
@@ -74,7 +78,6 @@ function editBasket(action, cat, i) {
                     });
             }
             break;
-        
         case "minus":
             for (let y = 0; y < basket.length; y++) {
                 if (nameTest == basket[y]["name"]) {
@@ -87,14 +90,18 @@ function editBasket(action, cat, i) {
                 } else{}
             }
             break;
-        
         case "delete":
             for (let y = 0; y < basket.length; y++) {
                 if (nameTest == basket[y]["name"]) {
                     basket.splice(y, 1)
                 } else{}             
             }
-
+            break;
+        case "buy":
+            basket = [];
+            renderBasket();
+            // window.location.replace("/pages/ordered.html")
+            window.location.href = "/pages/ordered.html";
             break;
         default:
             break;
