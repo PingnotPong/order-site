@@ -36,7 +36,22 @@ header img {
     height: 48px;
 }
 
-header > a, .burger-menu-container {
+.header-info {
+    display: flex;
+    gap: 16px;
+}
+
+.header-info i {
+    font-size: 24px;
+    color: var(--background);
+}
+
+.header-info span {
+    font-size: 16px;
+    color: var(--background);
+}
+
+header > a, .header-info {
     margin: 0 8px;
 }
 

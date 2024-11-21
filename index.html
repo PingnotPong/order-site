@@ -20,11 +20,17 @@
 <body onload="renderMenu()">
     <header>
         <a href="/index.html"><img src="/img/Logo.png" alt=""></a>
-        <div class="burger-menu-container" id="burger-menu"
-            onclick="changeClass(this, 'burger-open'); changeClassById('main', 'basket-opened'); changeClassById('menusection', 'basket-opened')">
-            <div class="burger-one"></div>
-            <div class="burger-two"></div>
-            <div class="burger-three"></div>
+        <div class="header-info">
+            <div>
+                <span id="basket-item-count">2x</span>
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+            <div class="burger-menu-container" id="burger-menu"
+                onclick="changeClass(this, 'burger-open'); changeClassById('main', 'basket-opened'); changeClassById('menusection', 'basket-opened')">
+                <div class="burger-one"></div>
+                <div class="burger-two"></div>
+                <div class="burger-three"></div>
+            </div>
         </div>
     </header>
     <main id="main">
@@ -53,4 +59,5 @@
         <span id="displaySum"></span></button>
 
 </body>
+
 </html>

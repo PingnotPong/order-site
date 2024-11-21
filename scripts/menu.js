@@ -3,6 +3,7 @@ const basketContRef = document.getElementById("basketContainer");
 const navRef = document.getElementById("nav");
 const menuRef = document.getElementById("menu");
 const buttonSumRef = document.getElementById("displaySum");
+const itemCountRef = document.getElementById("basket-item-count");
 const delcost = restaurants["bombay-mirchi"]["liefergebühr"];
 
 function getBasketElements() {
@@ -30,6 +31,7 @@ function renderMenu() {
 }
 
 function renderBasket() {
+    updateItemCount()
     basketContRef.innerHTML = "";
     if(basket.length > 0) {
         basketContRef.innerHTML += getBasketBaseTemplate();
@@ -80,6 +82,14 @@ function calculateSum() {
     for (let y = 0; y < basket.length; y++) {
         sum = sum + (basket[y]["count"] * basket[y]["price"]);
     }
+}
+
+function updateItemCount() {
+    count = 0;
+    for (let y = 0; y < basket.length; y++) {
+        count = count + basket[y]["count"];
+    }
+    itemCountRef.innerHTML = count + "x"
 }
 
 function basketAddCount() {

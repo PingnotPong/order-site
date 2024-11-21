@@ -24,6 +24,10 @@
     transition: 0.4s;
 }
 
+.burger-one {
+    margin-top: 5px;
+}
+
 .burger-open> .burger-one {
     transform: translate(0, 8px) rotate(-45deg);
 }
