@@ -24,7 +24,7 @@ body {
 
 header {
     height: 64px;
-    background-color: var(--no-color);
+    background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,6 +64,7 @@ main {
 .restaurant-head img {
     background-color: white;
     border-radius: 50%;
+    padding-left: 16px;
 }
 
 .restaurant-menu h1 {
@@ -155,7 +156,20 @@ main {
 
 .basket section {
     position: sticky;
-    top: 8px;  
+    top: 0;  
+    overflow-y: auto;
+    max-height: calc(100vh - 32px);
+}
+
+.basket section::-webkit-scrollbar {
+    background-color: var(--no-color);
+    width: 4px;
+}
+
+.basket section::-webkit-scrollbar-thumb {
+    background-color: var(--standart-text);
+    width: 4px;
+    border-radius: 2px;
 }
 
 .basket-header {
@@ -172,11 +186,12 @@ main {
 .basket-item {
     display: flex;
     flex-direction: column;
-    padding: 0 16px;
+    padding: 16px;
 }
 
 .basket-item h3 {
     margin: 0;
+    width: 100%;
 }
 
 .basket-item div {
@@ -234,6 +249,7 @@ main {
 .submit-order-button {
     display: flex;
     justify-content: center;
+    margin-bottom: 32px;
 }
 
 .submit-order-button button {
@@ -242,6 +258,7 @@ main {
     border: none;
     padding: 8px 16px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .submit-order-button button:hover {
@@ -274,6 +291,10 @@ footer {
 }
 
 @media(max-width: 700px) {
+    body {
+        padding-right: 0;
+    }
+
     .basket {
         width: 100vw;
         display: none;

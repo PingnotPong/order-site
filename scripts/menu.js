@@ -64,6 +64,7 @@ function editBasket(action, cat, i) {
                 if (basket[y]["name"] == nameTest) {
                     result = true;
                     basket[y]["count"]++;
+                    break;
                 } else {
                     result = false
                 }

@@ -1,4 +1,4 @@
-restaurants = {
+let restaurants = {
     "bombay-mirchi": {
         "name": "Asia Gourmet Pavillon & Hallo Sushi",
         "liefergebühr": 5,
