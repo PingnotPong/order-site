@@ -28,15 +28,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 8px;
-    padding-right: 8px;
     width: 100%;
     max-width: var(--max-width);
 }
 
 header img {
     height: 48px;
-    padding-left: 8px;
+}
+
+header > a, .burger-menu-container {
+    margin: 0 8px;
 }
 
 main {
@@ -288,6 +289,19 @@ footer {
 
 .open-basket-button {
     display: none;
+}
+
+.back-to-homepage {
+    color: var(--background);
+    background-color: var(--main-color);
+    border: none;
+    padding: 8px 16px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.back-to-homepage:hover {
+    background-color: #bb5d05;  
 }
 
 @media(max-width: 700px) {
